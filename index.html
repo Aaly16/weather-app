@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="city-search" id="search-form">
+        <input
+          type="text"
+          placeholder="Enter city"
+          class="enter-city-text"
+          id="search-input"
+        />
+        <input
+          type="image"
+          src="images/search.png"
+          width="30"
+          alt="search"
+          class="search-icon"
+        />
+        <button id="current-weather">Current</button>
+      </form>
+
+      <h1 id="city">
+        Vancouver
+      </h1>
+      <h2>
+        <span id="main-emoji"> 🌞 </span>
+        <span id="temp-number"> 18 </span>
+        <span id="temp-degree">
+          <a href="#" id="celsius">°C </a>
+        </span>
+
+        <span id="day-time">
+          <span id="day"> </span>
+          <br />
+          <span id="time"> </span>
+        </span>
+      </h2>
+
+      <div class="row weather-forecast">
+        <div class="col weekday">
+          Mon
+          <div class="emojis">
+            🌧
+          </div>
+          <div class="temperature">
+            10°C
+          </div>
+        </div>
+        <div class="col weekday">
+          Tues
+          <div class="emojis">
+            🌞
+          </div>
+          <div class="temperature">
+            20°C
+          </div>
+        </div>
+        <div class="col weekday">
+          Wed
+          <div class="emojis">
+            🌞
+          </div>
+          <div class="temperature">
+            20°C
+          </div>
+        </div>
+        <div class="col weekday">
+          Thurs
+          <div class="emojis">
+            ⛈
+          </div>
+          <div class="temperature">
+            10°C
+          </div>
+        </div>
+        <div class="col weekday">
+          Fri
+          <div class="emojis">
+            🌧
+          </div>
+          <div class="temperature">
+            10°C
+          </div>
+        </div>
+      </div>
+      <script src="src/index.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+.container {
+  display: block;
+  border: 3px solid #1c8adb;
+  margin: 30px;
+  border-radius: 4px;
+  max-width: 700px;
+}
+.city-search {
+  display: block;
+  padding: 30px;
+}
+
+.enter-city-text::placeholder {
+  color: #1c8adb;
+}
+input[type="text"] {
+  width: 200px;
+  padding: 5px;
+  border: 2px solid #1c8adb;
+  border-radius: 4px;
+}
+
+.search-icon {
+  position: relative;
+  top: 8px;
+  left: 5px;
+}
+
+button#current-weather {
+  color: white;
+  background: #1c8adb;
+  border: 1px solid #1c8adb;
+  margin: 30px;
+  border-radius: 4px;
+  padding: 5px 10px;
+  width: 100px;
+}
+
+button#current-weather:hover {
+  background: white;
+  color: #1c8adb;
+  transition: 200ms ease-in-out;
+}
+
+h1,
+h2 {
+  color: #1c8adb;
+  text-align: center;
+}
+h1 {
+  font-size: 37px;
+  font-weight: 600;
+  padding: 0 0 0 20px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+#day-time {
+  color: #1c8adb;
+  position: relative;
+  display: block;
+  right: 160px;
+  top: -110px;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+#temp-degree {
+  font-weight: 200;
+  font-size: 20px;
+  position: relative;
+  display: block;
+  right: -90px;
+  top: -45px;
+}
+
+a#celsius {
+  text-decoration: none;
+}
+a#fahrenheit {
+  text-decoration: none;
+}
+
+a:hover {
+  color: purple;
+}
+
+.row.weather-forecast {
+  color: #1c8adb;
+  padding: 0 0 30px;
+}
+.col.weekday {
+  font-weight: 400;
+  text-align: center;
+  font-size: 16px;
+}
+.emojis {
+  font-size: 30px;
+  text-align: center;
+}
+.temperature {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+}
