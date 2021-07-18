@@ -96,6 +96,10 @@ a:hover {
   color: purple;
 }
 
+#weather-description {
+  text-transform: capitalize;
+}
+
 .row.weather-forecast {
   color: #1c8adb;
   padding: 0 0 30px;

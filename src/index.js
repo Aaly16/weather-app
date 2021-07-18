@@ -27,7 +27,7 @@ time.innerHTML = `${timeFormat}`;
 function showTemperature(response) {
   let tempNumber = document.querySelector("#temp-number");
   let city = document.querySelector("#city");
-  let description = document.querySelector("#description");
+  let description = document.querySelector("#weather-description");
   let humidityPercentage = document.querySelector("#humidity-percentage");
   let windSpeed = document.querySelector("#wind-speed");
 
@@ -39,6 +39,7 @@ function showTemperature(response) {
   humidityPercentage.innerHTML = response.data.main.humidity;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
 }
+
 function findCity(city) {
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let units = "metric";
