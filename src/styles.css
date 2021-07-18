@@ -80,6 +80,11 @@ h1 {
   top: -5px;
 }
 
+#current-temperature .active {
+  color: #ae1cdb;
+  cursor: default;
+}
+
 a#celsius {
   text-decoration: none;
 }

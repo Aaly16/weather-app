@@ -33,7 +33,7 @@
           <button id="current-weather">Current</button>
         </form>
 
-        <h1 id="city">Vancouver</h1>
+        <h1 id="city"></h1>
 
         <div class="row weather-stats">
           <div class="col-4" id="day-time">
@@ -47,14 +47,16 @@
             <span id="main-emoji"> 🌞 </span>
             <span id="temp-number"> 18 </span>
             <span id="temp-degree">
-              <a href="#" id="celsius">°C </a> |
+              <a href="#" id="celsius" class="active">°C </a> |
               <a href="#" id="fahrenheit"> °F </a>
             </span>
           </div>
           <div class="col-4">
-            <span id="humidity"> Humidity: 70% </span>
+            <span id="humidity">
+              Humidity: <span id="humidity-percentage"> 70 </span> %
+            </span>
             <br />
-            <span id="wind"> Wind: 2 km/h </span>
+            <span id="wind"> Wind: <span id="wind-speed"> 2 </span> km/h </span>
           </div>
         </div>
 

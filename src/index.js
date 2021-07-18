@@ -6,7 +6,7 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 let day = days[now.getDay()];
 let weekDay = document.querySelector("#day");
@@ -25,10 +25,19 @@ let time = document.querySelector("#time");
 time.innerHTML = `${timeFormat}`;
 
 function showTemperature(response) {
-  document.querySelector("#temp-number").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#city").innerHTML = response.data.name;
+  let tempNumber = document.querySelector("#temp-number");
+  let city = document.querySelector("#city");
+  let description = document.querySelector("#description");
+  let humidityPercentage = document.querySelector("#humidity-percentage");
+  let windSpeed = document.querySelector("#wind-speed");
+
+  celsiusTemp = response.data.main.temp;
+
+  tempNumber.innerHTML = Math.round(celsiusTemp);
+  city.innerHTML = response.data.name;
+  description.innerHTML = response.data.weather[0].description;
+  humidityPercentage.innerHTML = response.data.main.humidity;
+  windSpeed.innerHTML = Math.round(response.data.wind.speed);
 }
 function findCity(city) {
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
@@ -45,8 +54,6 @@ function enterCity(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", enterCity);
 
-findCity("Edmonton");
-
 let currentWeather = document.querySelector("#current-weather");
 currentWeather.addEventListener("click", getCurrentLocation);
 
@@ -62,3 +69,30 @@ function calculatePosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showTemperature);
 }
+
+let celsiusTemp = null;
+
+function convertFtemp(event) {
+  event.preventDefault();
+  let tempNumber = document.querySelector("#temp-number");
+  cTemp.classList.remove("active");
+  fTemp.classList.add("active");
+  let fahrenheitConversion = (celsiusTemp * 9) / 5 + 32;
+  tempNumber.innerHTML = Math.round(fahrenheitConversion);
+}
+
+function convertCtemp(event) {
+  event.preventDefault();
+  let tempNumber = document.querySelector("#temp-number");
+  cTemp.classList.add("active");
+  fTemp.classList.remove("active");
+  tempNumber.innerHTML = Math.round(celsiusTemp);
+}
+
+let fTemp = document.querySelector("#fahrenheit");
+fTemp.addEventListener("click", convertFtemp);
+
+let cTemp = document.querySelector("#celsius");
+cTemp.addEventListener("click", convertCtemp);
+
+findCity("Edmonton");
