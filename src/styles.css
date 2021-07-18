@@ -75,6 +75,11 @@ h1 {
   top: -15px;
 }
 
+#current-temperature {
+  position: relative;
+  top: -5px;
+}
+
 a#celsius {
   text-decoration: none;
 }
