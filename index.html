@@ -15,67 +15,81 @@
 
   <body>
     <div class="container">
-      <form class="city-search" id="search-form">
-        <input
-          type="text"
-          placeholder="Enter city"
-          class="enter-city-text"
-          id="search-input"
-        />
-        <input
-          type="image"
-          src="images/search.png"
-          width="30"
-          alt="search"
-          class="search-icon"
-        />
-        <button id="current-weather">Current</button>
-      </form>
+      <div class="weather-wrapper">
+        <form class="city-search" id="search-form">
+          <input
+            type="text"
+            placeholder="Enter city"
+            class="enter-city-text"
+            id="search-input"
+          />
+          <input
+            type="image"
+            src="images/search.png"
+            width="30"
+            alt="search"
+            class="search-icon"
+          />
+          <button id="current-weather">Current</button>
+        </form>
 
-      <h1 id="city">Vancouver</h1>
-      <h2>
-        <span id="main-emoji"> 🌞 </span>
-        <span id="temp-number"> 18 </span>
-        <span id="temp-degree">
-          <a href="#" id="celsius">°C </a>
-        </span>
+        <h1 id="city">Vancouver</h1>
 
-        <span id="day-time">
-          <span id="day"> </span>
-          <br />
-          <span id="time"> </span>
-        </span>
-      </h2>
+        <div class="row weather-stats">
+          <div class="col-4" id="day-time">
+            <span id="day"> </span>
+            <span id="time"> </span>
+            <br />
+            <span id="weather-description"> Clear </span>
+          </div>
 
-      <div class="row weather-forecast">
-        <div class="col weekday">
-          Mon
-          <div class="emojis">🌧</div>
-          <div class="temperature">10°C</div>
+          <div class="col-4">
+            <span id="main-emoji"> 🌞 </span>
+            <span id="temp-number"> 18 </span>
+            <span id="temp-degree">
+              <a href="#" id="celsius">°C </a> |
+              <a href="#" id="fahrenheit"> °F </a>
+            </span>
+          </div>
+          <div class="col-4">
+            <span id="humidity"> Humidity: 70% </span>
+            <br />
+            <span id="wind"> Wind: 2 km/h </span>
+          </div>
         </div>
-        <div class="col weekday">
-          Tues
-          <div class="emojis">🌞</div>
-          <div class="temperature">20°C</div>
+
+        <div class="row weather-forecast">
+          <div class="col weekday">
+            Mon
+            <div class="emojis">🌧</div>
+            <div class="temperature">10°C</div>
+          </div>
+          <div class="col weekday">
+            Tues
+            <div class="emojis">🌞</div>
+            <div class="temperature">20°C</div>
+          </div>
+          <div class="col weekday">
+            Wed
+            <div class="emojis">🌞</div>
+            <div class="temperature">20°C</div>
+          </div>
+          <div class="col weekday">
+            Thurs
+            <div class="emojis">⛈</div>
+            <div class="temperature">10°C</div>
+          </div>
+          <div class="col weekday">
+            Fri
+            <div class="emojis">🌧</div>
+            <div class="temperature">10°C</div>
+          </div>
         </div>
-        <div class="col weekday">
-          Wed
-          <div class="emojis">🌞</div>
-          <div class="temperature">20°C</div>
-        </div>
-        <div class="col weekday">
-          Thurs
-          <div class="emojis">⛈</div>
-          <div class="temperature">10°C</div>
-        </div>
-        <div class="col weekday">
-          Fri
-          <div class="emojis">🌧</div>
-          <div class="temperature">10°C</div>
-        </div>
+        <script src="src/index.js"></script>
       </div>
-      <script src="src/index.js"></script>
+      <p>
+        <a href="https://github.com/Aaly16/weather-app"> Open-Source Code</a>
+      </p>
     </div>
-    <p><a href="https://github.com/Aaly16/weather-app"> Open-Source Code</a></p>
   </body>
 </html>

@@ -1,4 +1,4 @@
-.container {
+.weather-wrapper {
   display: block;
   border: 3px solid #1c8adb;
   margin: 30px;
@@ -7,11 +7,11 @@
 }
 .city-search {
   display: block;
-  padding: 30px;
+  padding: 20px 30px;
 }
 
 .enter-city-text::placeholder {
-  color: #1c8adb;
+  color: #4a728f;
 }
 input[type="text"] {
   width: 200px;
@@ -42,38 +42,37 @@ button#current-weather:hover {
   transition: 200ms ease-in-out;
 }
 
-h1,
-h2 {
-  color: #1c8adb;
-  text-align: center;
-}
 h1 {
-  font-size: 37px;
+  color: #ae1cdb;
+  text-align: left;
+  font-size: 30px;
   font-weight: 600;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 30px;
 }
 
-h2 {
+.weather-stats {
+  color: #ae1cdb;
+  font-size: 15px;
+  font-weight: 200;
+  padding: 0 0 30px 30px;
+}
+
+#main-emoji {
   font-size: 40px;
 }
 
-#day-time {
-  color: #1c8adb;
+#temp-number {
+  font-size: 30px;
   position: relative;
-  display: block;
-  right: 160px;
-  top: -110px;
-  font-size: 20px;
-  font-weight: 200;
+  top: -3px;
+  font-weight: 400;
 }
 
 #temp-degree {
   font-weight: 200;
   font-size: 20px;
   position: relative;
-  display: block;
-  right: -90px;
-  top: -45px;
+  top: -15px;
 }
 
 a#celsius {
@@ -104,4 +103,8 @@ a:hover {
   font-size: 14px;
   text-align: center;
   font-weight: 400;
+}
+
+p {
+  margin: 30px;
 }
