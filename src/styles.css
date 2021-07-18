@@ -57,27 +57,25 @@ h1 {
   padding: 0 0 30px 30px;
 }
 
-#main-emoji {
-  font-size: 40px;
-}
-
 #temp-number {
-  font-size: 30px;
+  font-size: 35px;
   position: relative;
-  top: -3px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 #temp-degree {
   font-weight: 200;
-  font-size: 20px;
+  font-size: 15px;
   position: relative;
-  top: -15px;
+  top: -25px;
 }
 
 #current-temperature {
   position: relative;
-  top: -5px;
+  top: -10px;
+  left: -15px;
+  white-space: nowrap;
+  float: left;
 }
 
 #current-temperature .active {
@@ -85,11 +83,23 @@ h1 {
   cursor: default;
 }
 
+#main-emoji {
+  position: relative;
+  top: -20px;
+  width: 70px;
+  height: auto;
+  text-align: center;
+}
+
 a#celsius {
   text-decoration: none;
 }
 a#fahrenheit {
   text-decoration: none;
+}
+
+#humidity-wind {
+  position: relative;
 }
 
 a:hover {
@@ -109,6 +119,7 @@ a:hover {
   text-align: center;
   font-size: 16px;
 }
+
 .emojis {
   font-size: 30px;
   text-align: center;
@@ -121,4 +132,5 @@ a:hover {
 
 p {
   margin: 30px;
+  font-size: 10px;
 }

@@ -22,14 +22,6 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-  return days[day];
-}
-
 function showTemperature(response) {
   let tempNumber = document.querySelector("#temp-number");
   let city = document.querySelector("#city");
@@ -48,8 +40,10 @@ function showTemperature(response) {
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
   dayTime.innerHTML = formatDate(response.data.dt * 1000);
   mainEmoji.setAttribute(
+    "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  mainEmoji.setAttribute("alt", response.data.weather[0].description);
 }
 
 function findCity(city) {
