@@ -1,28 +1,34 @@
-let now = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-let weekDay = document.querySelector("#day");
-weekDay.innerHTML = `${day}`;
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
 
-let hour = now.getHours();
-if (hour < 10) {
-  hour = `0${hour}`;
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
 }
-let timeFormat = `${hour}:${minutes}`;
-let time = document.querySelector("#time");
-time.innerHTML = `${timeFormat}`;
 
 function showTemperature(response) {
   let tempNumber = document.querySelector("#temp-number");
@@ -30,6 +36,8 @@ function showTemperature(response) {
   let description = document.querySelector("#weather-description");
   let humidityPercentage = document.querySelector("#humidity-percentage");
   let windSpeed = document.querySelector("#wind-speed");
+  let dayTime = document.querySelector("#day-time");
+  let mainEmoji = document.querySelector("#main-emoji");
 
   celsiusTemp = response.data.main.temp;
 
@@ -38,6 +46,10 @@ function showTemperature(response) {
   description.innerHTML = response.data.weather[0].description;
   humidityPercentage.innerHTML = response.data.main.humidity;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  dayTime.innerHTML = formatDate(response.data.dt * 1000);
+  mainEmoji.setAttribute(
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function findCity(city) {
