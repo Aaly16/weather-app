@@ -79,27 +79,4 @@ function calculatePosition(position) {
 
 let celsiusTemp = null;
 
-function convertFtemp(event) {
-  event.preventDefault();
-  let tempNumber = document.querySelector("#temp-number");
-  cTemp.classList.remove("active");
-  fTemp.classList.add("active");
-  let fahrenheitConversion = (celsiusTemp * 9) / 5 + 32;
-  tempNumber.innerHTML = Math.round(fahrenheitConversion);
-}
-
-function convertCtemp(event) {
-  event.preventDefault();
-  let tempNumber = document.querySelector("#temp-number");
-  cTemp.classList.add("active");
-  fTemp.classList.remove("active");
-  tempNumber.innerHTML = Math.round(celsiusTemp);
-}
-
-let fTemp = document.querySelector("#fahrenheit");
-fTemp.addEventListener("click", convertFtemp);
-
-let cTemp = document.querySelector("#celsius");
-cTemp.addEventListener("click", convertCtemp);
-
 findCity("Edmonton");

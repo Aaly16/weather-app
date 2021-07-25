@@ -45,10 +45,7 @@
           <div class="col-4" id="current-temperature">
             <img src="" alt="Clear" id="main-emoji" />
             <span id="temp-number"> </span>
-            <span id="temp-degree">
-              <a href="#" id="celsius" class="active">°C </a> |
-              <a href="#" id="fahrenheit"> °F </a>
-            </span>
+            <span id="temp-degree"> °C </span>
           </div>
           <div class="col-4" id="humidity-wind">
             <span id="humidity">
@@ -59,31 +56,38 @@
           </div>
         </div>
 
-        <div class="row weather-forecast">
-          <div class="col weekday">
-            Mon
-            <div class="emojis">🌧</div>
-            <div class="temperature">10°C</div>
-          </div>
-          <div class="col weekday">
-            Tues
-            <div class="emojis">🌞</div>
-            <div class="temperature">20°C</div>
-          </div>
-          <div class="col weekday">
-            Wed
-            <div class="emojis">🌞</div>
-            <div class="temperature">20°C</div>
-          </div>
-          <div class="col weekday">
-            Thurs
-            <div class="emojis">⛈</div>
-            <div class="temperature">10°C</div>
-          </div>
-          <div class="col weekday">
-            Fri
-            <div class="emojis">🌧</div>
-            <div class="temperature">10°C</div>
+        <div class="weather-forecast">
+          <div class="row">
+            <div class="col-2">
+              <div class="weekday">
+                Mon
+                <div class="emojis">🌧</div>
+                <div class="temperature">
+                  <span class="forecast-temperature-hi"> 10°C </span>
+                  <span class="forecast-temperature-low"> 5°C </span>
+                </div>
+              </div>
+            </div>
+            <div class="col weekday">
+              Tues
+              <div class="emojis">🌞</div>
+              <div class="temperature">20°C</div>
+            </div>
+            <div class="col weekday">
+              Wed
+              <div class="emojis">🌞</div>
+              <div class="temperature">20°C</div>
+            </div>
+            <div class="col weekday">
+              Thurs
+              <div class="emojis">⛈</div>
+              <div class="temperature">10°C</div>
+            </div>
+            <div class="col weekday">
+              Fri
+              <div class="emojis">🌧</div>
+              <div class="temperature">10°C</div>
+            </div>
           </div>
         </div>
         <script src="src/index.js"></script>

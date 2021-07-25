@@ -67,7 +67,7 @@ h1 {
   font-weight: 200;
   font-size: 15px;
   position: relative;
-  top: -25px;
+  top: -15px;
 }
 
 #current-temperature {
@@ -85,16 +85,13 @@ h1 {
 
 #main-emoji {
   position: relative;
-  top: -20px;
+  top: -10px;
   width: 70px;
   height: auto;
   text-align: center;
 }
 
 a#celsius {
-  text-decoration: none;
-}
-a#fahrenheit {
   text-decoration: none;
 }
 
@@ -110,11 +107,11 @@ a:hover {
   text-transform: capitalize;
 }
 
-.row.weather-forecast {
+.weather-forecast {
   color: #1c8adb;
   padding: 0 0 30px;
 }
-.col.weekday {
+.weekday {
   font-weight: 400;
   text-align: center;
   font-size: 16px;
