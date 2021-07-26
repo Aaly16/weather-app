@@ -110,6 +110,7 @@ a:hover {
 .weather-forecast {
   color: #1c8adb;
   padding: 0 0 30px;
+  text-align: center;
 }
 .weekday {
   font-weight: 400;
@@ -125,6 +126,10 @@ a:hover {
   font-size: 14px;
   text-align: center;
   font-weight: 400;
+}
+
+#forecast-temperature-low {
+  opacity: 0.5;
 }
 
 p {
