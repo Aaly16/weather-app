@@ -1,9 +1,15 @@
+.container {
+  display: block;
+  margin: 0 auto;
+}
+
 .weather-wrapper {
   display: block;
-  border: 3px solid #1c8adb;
+  border: 3px solid #007cb9;
   margin: 30px;
   border-radius: 4px;
   max-width: 700px;
+  background: linear-gradient(to top, #fcddcf 0%, #d5eeff 100%);
 }
 .city-search {
   display: block;
@@ -16,7 +22,7 @@
 input[type="text"] {
   width: 200px;
   padding: 5px;
-  border: 2px solid #1c8adb;
+  border: 2px solid #007cb9;
   border-radius: 4px;
 }
 
@@ -28,22 +34,22 @@ input[type="text"] {
 
 button#current-weather {
   color: white;
-  background: #1c8adb;
-  border: 1px solid #1c8adb;
+  background: #007cb9;
+  border: 1px solid #007cb9;
   margin: 30px;
   border-radius: 4px;
   padding: 5px 10px;
-  width: 100px;
+  width: 150px;
 }
 
 button#current-weather:hover {
   background: white;
-  color: #1c8adb;
+  color: #007cb9;
   transition: 200ms ease-in-out;
 }
 
 h1 {
-  color: #ae1cdb;
+  color: #005689;
   text-align: left;
   font-size: 30px;
   font-weight: 600;
@@ -51,15 +57,17 @@ h1 {
 }
 
 .weather-stats {
-  color: #ae1cdb;
+  color: #005689;
   font-size: 15px;
   font-weight: 200;
   padding: 0 0 30px 30px;
 }
 
 #temp-number {
-  font-size: 60px;
+  font-size: 50px;
   position: relative;
+  left: -35px;
+  top: -5px;
   font-weight: 600;
 }
 
@@ -67,7 +75,8 @@ h1 {
   font-weight: 200;
   font-size: 19px;
   position: relative;
-  top: -30px;
+  top: -27px;
+  left: -30px;
 }
 
 #current-temperature {
@@ -80,10 +89,9 @@ h1 {
 
 #main-emoji {
   position: relative;
-  top: -15px;
-  width: 80px;
-  height: auto;
-  text-align: center;
+  top: -19px;
+  left: -30px;
+  width: 75px;
 }
 
 a#celsius {
@@ -99,7 +107,7 @@ a#celsius {
 }
 
 .weather-forecast {
-  color: #1c8adb;
+  color: #005689;
   padding: 0 0 30px;
   text-align: center;
 }
@@ -120,7 +128,8 @@ a#celsius {
 }
 
 #forecast-temperature-low {
-  opacity: 0.5;
+  color: #007cb9;
+  opacity: 0.7;
 }
 
 p {
